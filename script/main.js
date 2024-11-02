@@ -58,6 +58,7 @@ const animationTimeline = () => {
     .to(".container", 0.1, {
       visibility: "visible"
     })
+    .call(playBackgroundMusic)
     .from(".one", 0.7, {
       opacity: 0,
       y: 10
@@ -299,6 +300,14 @@ const animationTimeline = () => {
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
     tl.restart();
+  });
+};
+
+const playBackgroundMusic = () => {
+  const audio = document.getElementById('backgroundMusic');
+  audio.volume = 0.5; // Set the volume to 50%
+  audio.play().catch(error => {
+    console.log("Audio play failed:", error);
   });
 };
 
