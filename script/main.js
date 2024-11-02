@@ -303,13 +303,13 @@ const animationTimeline = () => {
   });
 };
 
-const playBackgroundMusic = () => {
-  const audio = document.getElementById('backgroundMusic');
-  audio.volume = 0.5; // Set the volume to 50%
-  audio.play().catch(error => {
-    console.log("Audio play failed:", error);
-  });
-};
+// const playBackgroundMusic = () => {
+//   const audio = document.getElementById('backgroundMusic');
+//   audio.volume = 0.5; // Set the volume to 50%
+//   audio.play().catch(error => {
+//     console.log("Audio play failed:", error);
+//   });
+// };
 
 // Run fetch and animation in sequence
 fetchData();
